@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+        title Chatting
+    body
+        header 
+            h1 Chatting
+            
+        main
+            div#nickname
+                form#name
+                    input#nameInput(type="text", placeholder="nickname", required)
+                    button Enter
+            div#welcome(hidden=true)
+                form(action="")
+                    input(type="text", placeholder="room id", required)
+                    button Enter room
+                h4 Open Rooms:
+                ul 
+            div#room(hidden=true)
+                h3 
+                ul
+                form#msg(action="")
+                    input#msgInput(type="text", placeholder="message", required)
+                    button send Document
+        script(src="/socket.io/socket.io.js")    
+        script(src="/public/js/app.js") 
+        
